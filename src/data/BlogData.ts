@@ -27,7 +27,7 @@ export interface BlogPost {
 }
 
 const defaultAuthor: Author = {
-  name: "Pawana Lake Resort Team",
+  name: "Serenity Wilderness Resort Team",
   bio: "Passionate travel experts and camping enthusiasts sharing insider tips for the perfect outdoor adventure near Pune and Maharashtra.",
   avatar: "/placeholder.svg"
 };
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     author: defaultAuthor,
     tableOfContents: [
       { id: "introduction", title: "Why Choose Hidden Camping Spots", level: 2 },
-      { id: "pawana-lake", title: "1. Pawana Lake - The Crown Jewel", level: 2 },
+      { id: "pawana-lake", title: "1. Serenity Wilderness - The Crown Jewel", level: 2 },
       { id: "rajmachi", title: "2. Rajmachi Fort Base", level: 2 },
       { id: "bhushi-dam", title: "3. Bhushi Dam Surroundings", level: 2 },
       { id: "tikona-fort", title: "4. Tikona Fort Camping", level: 2 },
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     ],
     seo: {
       metaTitle: "Top 7 Hidden Camping Spots Near Pune | Secret Locations 2024",
-      metaDescription: "Discover 7 secret camping spots near Pune perfect for weekend getaways. From Pawana Lake to hidden valleys, find your perfect camping adventure in Maharashtra.",
+      metaDescription: "Discover 7 secret camping spots near Pune perfect for weekend getaways. From Serenity Wilderness to hidden valleys, find your perfect camping adventure in Maharashtra.",
       focusKeyword: "hidden camping spots near pune",
       keywords: ["camping near pune", "hidden camping spots", "weekend getaway pune", "secret camping locations", "pune camping guide", "nature camping maharashtra"]
     },
@@ -74,13 +74,13 @@ export const blogPosts: BlogPost[] = [
 
         <p>Pune's proximity to the Western Ghats makes it a gateway to some of India's most spectacular hidden camping destinations. While popular spots get crowded, these secret locations offer solitude, stunning landscapes, and unforgettable memories.</p>
 
-        <h2 id="pawana-lake">1. Pawana Lake - The Crown Jewel of Camping Near Pune</h2>
+        <h2 id="pawana-lake">1. Serenity Wilderness - The Crown Jewel of Camping Near Pune</h2>
         
         <p><strong>Distance from Pune:</strong> 110 km (2.5 hours drive)<br>
         <strong>Best Time:</strong> October to March<br>
         <strong>Camping Style:</strong> Lakeside luxury camping</p>
 
-        <p>Nestled between Lonavala and Khandala, Pawana Lake offers the perfect blend of adventure and comfort. This artificial reservoir, created by the Pawana Dam, transforms into a camping paradise during the cooler months.</p>
+        <p>Nestled between Lonavala and Khandala, Serenity Wilderness offers the perfect blend of adventure and comfort. This artificial reservoir, created by the Pawana Dam, transforms into a camping paradise during the cooler months.</p>
 
         <div class="callout callout-success">
           <div class="callout-icon">🌟</div>
@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
 
         <p><strong>Camping Highlights:</strong></p>
         <ul>
-          <li>Sunrise views over Pawana Lake</li>
+          <li>Sunrise views over Serenity Wilderness</li>
           <li>Ancient caves and water cisterns</li>
           <li>Moderate trek to the summit</li>
           <li>Perfect for solo and group camping</li>
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
 
         <h2 id="destinations">Top Weekend Camping Destinations From Pune</h2>
 
-        <h3>1. Pawana Lake (110 km - 2.5 hours)</h3>
+        <h3>1. Serenity Wilderness (110 km - 2.5 hours)</h3>
         <p><strong>Perfect For:</strong> Couples, families, luxury camping<br>
         <strong>Activities:</strong> Boating, trekking, stargazing, bonfire</p>
 
@@ -470,7 +470,7 @@ export const blogPosts: BlogPost[] = [
         
         <p><strong>For Beginners:</strong></p>
         <ul>
-          <li>Pawana Lake - Luxury camping with facilities</li>
+          <li>Serenity Wilderness - Luxury camping with facilities</li>
           <li>Kolad - River camping with adventure sports</li>
           <li>Wai - Cultural camping with local experiences</li>
         </ul>
@@ -696,13 +696,13 @@ export const blogPosts: BlogPost[] = [
 
         <h2 id="romantic-spots">Top Romantic Camping Destinations Near Pune</h2>
 
-        <h3>1. Pawana Lake - The Ultimate Romantic Paradise</h3>
+        <h3>1. Serenity Wilderness - The Ultimate Romantic Paradise</h3>
         
         <p><strong>Distance:</strong> 110 km from Pune<br>
         <strong>Romance Rating:</strong> ⭐⭐⭐⭐⭐<br>
         <strong>Best For:</strong> Luxury camping, lakeside dinners, stargazing</p>
 
-        <p>Pawana Lake stands as the crown jewel of romantic camping near Pune. The serene waters reflect the surrounding hills, creating a mirror-like surface that's perfect for romantic boat rides at sunset.</p>
+        <p>Serenity Wilderness stands as the crown jewel of romantic camping near Pune. The serene waters reflect the surrounding hills, creating a mirror-like surface that's perfect for romantic boat rides at sunset.</p>
 
         <div class="callout callout-success">
           <div class="callout-icon">🌟</div>
@@ -868,7 +868,7 @@ export const blogPosts: BlogPost[] = [
 
         <p><strong>Perfect Proposal Spots:</strong></p>
         <ul>
-          <li>Sunrise at Pawana Lake with mountain backdrop</li>
+          <li>Sunrise at Serenity Wilderness with mountain backdrop</li>
           <li>Sunset at Mulshi Dam overlooking the water</li>
           <li>Under the stars at Bhandardara</li>
           <li>During a private boat ride</li>
@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
 
         <h3>Kayaking and Canoeing</h3>
         
-        <p><strong>Best Locations:</strong> Pawana Lake, Mulshi Dam, Kolad River<br>
+        <p><strong>Best Locations:</strong> Serenity Wilderness, Mulshi Dam, Kolad River<br>
         <strong>Difficulty Level:</strong> Beginner to Intermediate<br>
         <strong>Duration:</strong> 1-3 hours</p>
 
@@ -1012,7 +1012,7 @@ export const blogPosts: BlogPost[] = [
         <ul>
           <li>Distance: 3 km round trip</li>
           <li>Duration: 2-3 hours</li>
-          <li>Highlights: Triangular fort, Pawana Lake views</li>
+          <li>Highlights: Triangular fort, Serenity Wilderness views</li>
           <li>Best for: Families, beginners</li>
         </ul>
 
@@ -1053,7 +1053,7 @@ export const blogPosts: BlogPost[] = [
 
         <p><strong>Popular Trails:</strong></p>
         <ul>
-          <li>Pawana Lake circuit (Easy - 10 km)</li>
+          <li>Serenity Wilderness circuit (Easy - 10 km)</li>
           <li>Mulshi to Tamhini route (Moderate - 25 km)</li>
           <li>Bhandardara forest trails (Challenging - 30+ km)</li>
         </ul>
@@ -1103,7 +1103,7 @@ export const blogPosts: BlogPost[] = [
         <p><strong>Popular Night Treks:</strong></p>
         <ul>
           <li>Andharban night trail (3-4 hours)</li>
-          <li>Pawana Lake circuit walk (2 hours)</li>
+          <li>Serenity Wilderness circuit walk (2 hours)</li>
           <li>Fort exploration with ghost stories</li>
         </ul>
 

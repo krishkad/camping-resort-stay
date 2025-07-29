@@ -14,7 +14,7 @@ const Blog = () => {
         <div className="container  mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--forest-600)] mb-6">
-              Discover Pawana Lake
+              Discover Serenity Wilderness
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Explore our latest articles about the beauty, adventures, and

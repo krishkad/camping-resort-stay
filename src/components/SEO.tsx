@@ -67,12 +67,12 @@ const SEO = ({
     dateModified: modifiedTime || publishedTime,
     author: {
       "@type": "Person",
-      name: author || "Pawana Lake Resort",
+      name: author || "Serenity Wilderness Resort",
       url: siteUrl,
     },
     publisher: {
       "@type": "Organization",
-      name: "Pawana Lake Resort",
+      name: "Serenity Wilderness Resort",
       logo: {
         "@type": "ImageObject",
         url: `${siteUrl}/logo.png`,
@@ -102,10 +102,10 @@ const SEO = ({
   };
 
   // Enhanced meta title with better SEO structure
-  const enhancedTitle = `${title} | Pawana Lake Resort - Maharashtra's Premier Camping Destination`;
+  const enhancedTitle = `${title} | Serenity Wilderness Resort - Maharashtra's Premier Camping Destination`;
 
   // Enhanced description with location and CTA
-  const enhancedDescription = `${description} Located at Pawana Lake, Maharashtra. Book your luxury camping experience today!`;
+  const enhancedDescription = `${description} Located at Serenity Wilderness, Maharashtra. Book your luxury camping experience today!`;
 
   return (
     <>
@@ -114,13 +114,13 @@ const SEO = ({
         <title>{enhancedTitle}</title>
         <meta name="description" content={enhancedDescription} />
         <meta name="keywords" content={keywords.join(", ")} />
-        <meta name="author" content={author || "Pawana Lake Resort"} />
+        <meta name="author" content={author || "Serenity Wilderness Resort"} />
 
         {/* Geographic SEO */}
         <meta name="geo.region" content="IN-MH" />
         <meta
           name="geo.placename"
-          content="Pawana Lake, Lonavala, Maharashtra"
+          content="Serenity Wilderness, Lonavala, Maharashtra"
         />
         <meta name="geo.position" content="18.7402;73.4027" />
         <meta name="ICBM" content="18.7402, 73.4027" />
@@ -134,10 +134,10 @@ const SEO = ({
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content={`${title} - Pawana Lake Resort`}
+          content={`${title} - Serenity Wilderness Resort`}
         />
         <meta property="og:url" content={fullUrl ? fullUrl : ""} />
-        <meta property="og:site_name" content="Pawana Lake Resort" />
+        <meta property="og:site_name" content="Serenity Wilderness Resort" />
         <meta property="og:locale" content="en_US" />
         {publishedTime && (
           <meta property="article:published_time" content={publishedTime} />
@@ -160,7 +160,7 @@ const SEO = ({
         <meta name="twitter:image" content={fullImageUrl ? fullImageUrl : ""} />
         <meta
           name="twitter:image:alt"
-          content={`${title} - Pawana Lake Resort`}
+          content={`${title} - Serenity Wilderness Resort`}
         />
 
         {/* Additional SEO Tags */}
@@ -173,8 +173,8 @@ const SEO = ({
         <link rel="canonical" href={fullUrl ? fullUrl : ""} />
 
         {/* Mobile and App Meta Tags */}
-        <meta name="apple-mobile-web-app-title" content="Pawana Lake Resort" />
-        <meta name="application-name" content="Pawana Lake Resort" />
+        <meta name="apple-mobile-web-app-title" content="Serenity Wilderness Resort" />
+        <meta name="application-name" content="Serenity Wilderness Resort" />
         <meta name="theme-color" content="#059669" />
 
         {/* Structured Data */}
