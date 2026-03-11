@@ -6,7 +6,6 @@ import ContactSection from '@/components/ContactSection';
 import DayTimelineSection from '@/components/DayTimelineSection';
 // import ExperienceWalkthrough from '@/components/ExperienceWalkthrough';
 import Gallery from '@/components/Gallery';
-import HeroSection from '@/components/HeroSection';
 import HeroSection2 from '@/components/HeroSection2';
 import TestimonialsSection from '@/components/TestimonialsSection';
 

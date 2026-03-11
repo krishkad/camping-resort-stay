@@ -1,15 +1,13 @@
 "use client";
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Phone, MessageCircle } from "lucide-react";
 import FloatingActions from "./FloatingAction";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const phoneNumber = "919876543210"; // change this
-  const whatsappLink = `https://wa.me/${phoneNumber}`;
+  // const phoneNumber = "919876543210"; // change this
+  // const whatsappLink = `https://wa.me/${phoneNumber}`;
 
   const footerLinks = {
     resort: [
