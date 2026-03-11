@@ -3,9 +3,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Phone, MessageCircle } from "lucide-react";
+import FloatingActions from "./FloatingAction";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const phoneNumber = "919876543210"; // change this
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
 
   const footerLinks = {
     resort: [
@@ -75,7 +79,8 @@ const Footer = () => {
 
               <p className="text-white/90 leading-relaxed mb-6">
                 Where luxury meets wilderness. Experience the perfect blend of
-                comfort and adventure in nature&apos;s most breathtaking settings.
+                comfort and adventure in nature&apos;s most breathtaking
+                settings.
               </p>
 
               {/* Newsletter */}
@@ -200,25 +205,14 @@ const Footer = () => {
                 </a>
               </p>
               <p className="mt-2 text-xs">
-                Designed by <span className="text-[var(--earth-400)]">Krrish</span> for nature lovers seeking luxury in the
-                wilderness
+                Designed by{" "}
+                <span className="text-[var(--earth-400)]">Krrish</span> for
+                nature lovers seeking luxury in the wilderness
               </p>
             </div>
           </div>
 
-          {/* Floating CTA */}
-          <div className="fixed bottom-6 right-6 z-50">
-            <Button
-              className="bg-[var(--earth-500)] hover:bg-[var(--earth-600)] text-white px-6 py-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-slow"
-              onClick={() =>
-                document
-                  .getElementById("booking")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Book Now 🏕️
-            </Button>
-          </div>
+         <FloatingActions />
         </div>
       </div>
     </footer>

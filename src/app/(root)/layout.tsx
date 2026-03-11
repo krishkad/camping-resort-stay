@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <main className="font-serif">
+    <main className="">
       <Navigation />
       <main className="w-full">{children}</main>
       <Footer />

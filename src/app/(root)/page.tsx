@@ -7,12 +7,13 @@ import DayTimelineSection from '@/components/DayTimelineSection';
 // import ExperienceWalkthrough from '@/components/ExperienceWalkthrough';
 import Gallery from '@/components/Gallery';
 import HeroSection from '@/components/HeroSection';
+import HeroSection2 from '@/components/HeroSection2';
 import TestimonialsSection from '@/components/TestimonialsSection';
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
-      <HeroSection />
+      <HeroSection2 />
       <CampListings />
       {/* <ExperienceWalkthrough /> */}
       <DayTimelineSection />
