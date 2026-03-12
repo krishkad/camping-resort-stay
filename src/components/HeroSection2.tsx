@@ -62,7 +62,7 @@ const HeroSection2 = () => {
         </div> */}
 
         <div
-          className={`flex flex-wrap justify-center gap-4 mb-6 transition-all duration-1000 delay-500 ${
+          className={`flex flex-wrap justify-center gap-4 mb-6 transition-all duration-1000 ${
             isTextVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -83,7 +83,7 @@ const HeroSection2 = () => {
 
         {/* Headline */}
         <h1
-          className={`font-playfair text-5xl lg:text-7xl font-bold leading-tight mb-6 transition-all duration-1000 ${
+          className={`font-playfair text-5xl lg:text-7xl font-bold leading-tight mb-6 transition-all duration-1000 delay-300 ${
             isTextVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6"
@@ -95,7 +95,7 @@ const HeroSection2 = () => {
 
         {/* Subheadline */}
         <p
-          className={`text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 transition-all duration-1000 delay-300 ${
+          className={`text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 transition-all duration-1000 delay-500 ${
             isTextVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6"
