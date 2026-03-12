@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +38,6 @@ const Navigation = () => {
         }`}
       >
         <div className="flex items-center justify-between h-[68px] px-6">
-
           {/* Logo */}
           <div
             onClick={() => router.push("/")}
@@ -58,7 +58,6 @@ const Navigation = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -82,7 +81,6 @@ const Navigation = () => {
             >
               Book Now
             </Button>
-
           </div>
 
           {/* Mobile Button */}
@@ -98,7 +96,6 @@ const Navigation = () => {
               <Menu className="w-6 h-6" />
             )}
           </button>
-
         </div>
 
         {/* Mobile Menu */}
@@ -108,7 +105,6 @@ const Navigation = () => {
           }`}
         >
           <div className="px-6 pb-6 pt-2 flex flex-col gap-4">
-
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -116,7 +112,10 @@ const Navigation = () => {
                   router.push(link.href);
                   setMobileOpen(false);
                 }}
-                className="text-left text-lg font-medium text-gray-800 hover:text-black transition"
+                className={cn(
+                  "text-left text-lg font-medium text-gray-800 hover:text-black transition",
+                  isScrolled ? "text-black" : "text-white",
+                )}
               >
                 {link.label}
               </button>
@@ -131,10 +130,8 @@ const Navigation = () => {
             >
               Book Now
             </Button>
-
           </div>
         </div>
-
       </div>
     </nav>
   );

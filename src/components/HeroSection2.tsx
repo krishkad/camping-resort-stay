@@ -1,18 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Star, ShieldCheck, Tent } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ShieldCheck, Star, Tent } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const HeroSection2 = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop",
+    "/images/hero/glamping-hero-1.jpeg",
+    "/images/hero/glamping-hero-2.jpeg",
+   
   ];
 
   useEffect(() => {
