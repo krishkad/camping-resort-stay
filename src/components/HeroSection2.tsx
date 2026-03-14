@@ -11,7 +11,6 @@ const HeroSection2 = () => {
   const heroImages = [
     "/images/hero/glamping-hero-1.jpeg",
     "/images/hero/glamping-hero-2.jpeg",
-   
   ];
 
   useEffect(() => {
@@ -42,24 +41,11 @@ const HeroSection2 = () => {
         ))}
 
         {/* Premium overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/40" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6">
-        {/* Trust Signals */}
-        {/* <div
-          className={`flex flex-wrap justify-center gap-8 text-sm text-white/80 mb-6 transition-all duration-1000 delay-500 ${
-            isTextVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="flex items-center gap-2">⭐ 4.9/5 Guest Rating</div>
-          <div className="flex items-center gap-2">
-            🛡️ Safe & Verified Camps
-          </div>
-          <div className="flex items-center gap-2">🏕️ 500+ Happy Campers</div>
-        </div> */}
-
         <div
           className={`flex flex-wrap justify-center gap-4 mb-6 transition-all duration-1000 ${
             isTextVisible ? "opacity-100" : "opacity-0"
@@ -101,7 +87,7 @@ const HeroSection2 = () => {
           }`}
         >
           Private luxury tents, curated nature experiences, and warm hospitality
-          — perfect for couples and adventurers escaping the city.
+          perfect for couples and adventurers escaping the city.
         </p>
 
         {/* CTA Buttons */}
