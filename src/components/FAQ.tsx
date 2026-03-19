@@ -73,15 +73,13 @@ const faqs = [
   },
 ];
 
-
-
 const FAQ = () => {
   const handleWhatsApp = () => {
     const message =
       "Hi! I'm interested in Pawna Lake Camping. Could you please help me with booking?";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
+      "_blank",
     );
   };
 
@@ -92,7 +90,7 @@ const FAQ = () => {
     <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-12 bg-secondary">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-6xl font-playfair font-bold text-stone mb-4 sm:mb-6">
+          <h2 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-6">
             Everything You Need to Know
           </h2>
           <p className="text-lg sm:text-xl text-stone/80 font-poppins">

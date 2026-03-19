@@ -1,235 +1,139 @@
 "use client";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Star,
+  Heart,
+  Camera,
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+const testimonials = [
+  {
+    name: "Arjun & Priya",
+    location: "Mumbai",
+    text: "Pawna Camps exceeded every expectation! The sunrise yoga, luxury tent comfort, and stargazing experience created the most romantic weekend of our lives. Can't wait to return!",
+    rating: 5,
+    image: "/images/testimonials/pawna-lake-camping-testimonials-1.webp",
+    category: "Couple",
+  },
+  {
+    name: "The Sharma Family",
+    location: "Pune",
+    text: "Our kids are still talking about the night forest walk and campfire stories. The perfect blend of adventure and comfort for families. Every detail was thoughtfully planned!",
+    rating: 5,
+    image: "/images/testimonials/pawna-lake-camping-testimonials-2.webp",
+    category: "Family",
+  },
+  {
+    name: "Maya, Solo Traveler",
+    location: "Pune",
+    text: "As a solo female traveler, I felt completely safe and welcomed. The guided waterfall trek was incredible, and I made lifelong friends around the campfire!",
+    rating: 5,
+    image: "/images/testimonials/pawna-lake-camping-testimonials-3.webp",
+    category: "Solo",
+  },
+];
 
-const TestimonialsSection = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+const Testimonials = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah & Michael Chen",
-      location: "San Francisco, CA",
-      image:
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=100&h=100&fit=crop&crop=face",
-      rating: 5,
-      text: "Our stay at Serenity Wilderness was absolutely magical. The luxury dome was perfectly appointed, and waking up to sunrise over the mountains was unforgettable. The staff went above and beyond to make our anniversary special.",
-      experience: "Luxury Safari Dome • 3 nights",
-    },
-    {
-      id: 2,
-      name: "James Rodriguez",
-      location: "Austin, TX",
-      image:
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=100&h=100&fit=crop&crop=face",
-      rating: 5,
-      text: "As someone who travels frequently for work, I was skeptical about 'glamping.' But this exceeded all expectations. The forest cabin was a perfect blend of rustic charm and modern luxury. I'll definitely be back.",
-      experience: "Forest Cabin Retreat • 2 nights",
-    },
-    {
-      id: 3,
-      name: "The Johnson Family",
-      location: "Denver, CO",
-      image:
-        "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=100&h=100&fit=crop&crop=face",
-      rating: 5,
-      text: "Perfect family getaway! The kids loved the outdoor activities while my wife and I enjoyed the spa services. The mountain lodge had plenty of space for all of us, and the views were spectacular every morning.",
-      experience: "Mountain View Lodge • 4 nights",
-    },
-    {
-      id: 4,
-      name: "Emma Thompson",
-      location: "Seattle, WA",
-      image:
-        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=100&h=100&fit=crop&crop=face",
-      rating: 5,
-      text: "I came here for a solo retreat and found exactly what I was looking for. The riverside tent was so peaceful, and the guided meditation sessions helped me reconnect with nature and myself. Truly transformative.",
-      experience: "Riverside Safari Tent • 5 nights",
-    },
-  ];
+  // Additional lifestyle images (in a real app, these would be separate from main images)
 
-  const awards = [
-    { name: "TripAdvisor", award: "Travelers' Choice 2024", logo: "🏆" },
-    { name: "Conde Nast", award: "Best Glamping Resort", logo: "⭐" },
-    { name: "Travel + Leisure", award: "World's Best Awards", logo: "🌟" },
-    { name: "National Geographic", award: "Unique Lodges", logo: "🏅" },
-  ];
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <svg
-        key={i}
-        className={`w-5 h-5 ${
-          i < rating ? "text-yellow-400" : "text-gray-300"
-        }`}
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
-    ));
+  const closeLightbox = () => {
+    setSelectedImage(null);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[var(--forest-600)] to-[var(--forest-800)] text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-white/20 rounded-full animate-pulse-slow" />
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full animate-float" />
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full animate-pulse-slow" />
-      </div>
+    <>
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Testimonials */}
+          <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-6">
+              Stories from Fellow Adventurers
+            </h2>
+            <p className="text-lg sm:text-xl text-stone/80 max-w-3xl mx-auto font-poppins">
+              Real experiences from couples, families, and solo travelers who
+              found their perfect escape at Pawna Camps.
+            </p>
+          </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
-            Stories from Our Guests
-          </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Discover why travelers from around the world choose Serenity
-            Wilderness for their luxury outdoor adventures
-          </p>
-        </div>
-
-        {/* Main Testimonial */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`transition-all duration-700 ${
-                  index === currentTestimonial
-                    ? "opacity-100 transform translate-x-0"
-                    : "opacity-0 absolute inset-0 transform translate-x-8"
-                }`}
+              <Card
+                key={index}
+                className="rounded-3xl border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden p-0 gap-0"
+                style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 glass-card">
-                  <div className="flex flex-col md:flex-row items-center gap-8">
-                    {/* Profile */}
-                    <div className="flex-shrink-0 text-center">
-                      <div className="w-24 h-24 rounded-full overflow-hidden mb-4 mx-auto border-4 border-white/20">
-                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <h4 className="font-playfair text-xl font-semibold mb-1">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-white/80 text-sm mb-2">
-                        {testimonial.location}
-                      </p>
-                      <div className="flex justify-center mb-2">
-                        {renderStars(testimonial.rating)}
-                      </div>
-                      <p className="text-earth-300 text-sm font-medium">
-                        {testimonial.experience}
-                      </p>
-                    </div>
+                {/* Category Badge */}
+                <div
+                  className={`px-4 sm:px-6 py-3 sm:py-4 text-center font-bold text-white ${
+                    testimonial.category === "Couple"
+                      ? "bg-gradient-to-r from-[#ff6b6b] to-pink-500"
+                      : testimonial.category === "Family"
+                        ? "bg-gradient-to-r from-[#4caf50] to-green-600"
+                        : "bg-gradient-to-r from-blue-400 to-blue-500"
+                  }`}
+                >
+                  {testimonial.category === "Couple" && (
+                    <Heart className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
+                  )}
+                  {testimonial.category === "Family" && (
+                    <Star className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
+                  )}
+                  {testimonial.category === "Solo" && (
+                    <Camera className="w-4 sm:w-5 h-4 sm:h-5 inline mr-2" />
+                  )}
+                  <span className="text-sm sm:text-base">
+                    {testimonial.category} Adventure
+                  </span>
+                </div>
 
-                    {/* Testimonial Content */}
-                    <div className="flex-1">
-                      <svg
-                        className="w-12 h-12 text-earth-300 mb-4 opacity-50"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                      </svg>
-                      <p className="text-lg leading-relaxed text-white/95 font-light">
-                        &quot;{testimonial.text}&quot;
-                      </p>
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 sm:w-5 h-4 sm:h-5 fill-yellow-600 text-yellow-600"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-stone/80 mb-4 sm:mb-6 italic font-poppins leading-relaxed text-sm sm:text-base">
+                    &quot;{testimonial.text}&quot;
+                  </p>
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-12 sm:w-14 h-12 sm:h-14 rounded-full object-cover shadow-lg"
+                    />
+                    <div>
+                      <div className="font-bold text-stone font-playfair text-base sm:text-lg">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-xs sm:text-sm text-stone/60 font-poppins">
+                        {testimonial.location}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center mt-8 space-x-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial
-                    ? "bg-[var(--earth-400)] scale-125"
-                    : "bg-white/30 hover:bg-white/50"
-                }`}
-                onClick={() => setCurrentTestimonial(index)}
-              />
-            ))}
-          </div>
+          {/* Instagram Feed */}
         </div>
-
-        {/* Awards Section */}
-        <div className="border-t border-white/20 pt-16">
-          <h3 className="font-playfair text-2xl font-semibold text-center mb-8">
-            Recognized by Leading Travel Publications
-          </h3>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {awards.map((award, index) => (
-              <div
-                key={index}
-                className="text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {award.logo}
-                </div>
-                <h4 className="font-semibold text-white mb-1">{award.name}</h4>
-                <p className="text-white/80 text-sm">{award.award}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <p className="text-xl text-white/90 mb-6">
-            Join hundreds of satisfied guests who&apos;ve discovered their perfect
-            escape
-          </p>
-          <Button
-            size="lg"
-            className="bg-[var(--earth-500)] hover:bg-[var(--earth-600)] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            onClick={() =>
-              document
-                .getElementById("booking")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Book Your Stay Today
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
-export default TestimonialsSection;
+export default Testimonials;
