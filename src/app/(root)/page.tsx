@@ -1,13 +1,13 @@
-
-import Blog from '@/components/Blog';
-import BookingSection from '@/components/BookingSection';
-import CampListings from '@/components/CampListings';
-import ContactSection from '@/components/ContactSection';
-import DayTimelineSection from '@/components/DayTimelineSection';
+import Blog from "@/components/Blog";
+import BookingSection from "@/components/BookingSection";
+import CampListings from "@/components/CampListings";
+import ContactSection from "@/components/ContactSection";
+import DayTimelineSection from "@/components/DayTimelineSection";
+import FAQ from "@/components/FAQ";
 // import ExperienceWalkthrough from '@/components/ExperienceWalkthrough';
-import Gallery from '@/components/Gallery';
-import HeroSection2 from '@/components/HeroSection2';
-import TestimonialsSection from '@/components/TestimonialsSection';
+import Gallery from "@/components/Gallery";
+import HeroSection2 from "@/components/HeroSection2";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Home = () => {
   return (
@@ -19,6 +19,7 @@ const Home = () => {
       <Gallery />
       <BookingSection />
       <TestimonialsSection />
+      <FAQ />
       <Blog />
       <ContactSection />
     </div>

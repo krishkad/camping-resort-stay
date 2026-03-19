@@ -9,8 +9,8 @@ const HeroSection2 = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   const heroImages = [
-    "/images/hero/glamping-hero-1.jpeg",
     "/images/hero/glamping-hero-2.jpeg",
+    "/images/accommodation/triangle-tent.jpg",
   ];
 
   useEffect(() => {

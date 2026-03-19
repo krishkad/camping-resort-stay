@@ -19,35 +19,35 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop",
+      src: "/images/accommodation/tent-tent.jpg",
       category: "nature",
       title: "Mountain Sunrise",
       description: "Golden hour over the wilderness",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
+      src: "/images/accommodation/triangle-tent.jpg",
       category: "nature",
       title: "River Valley",
       description: "Pristine waters flow through untouched landscape",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
+      src: "/images/hero/glamping-hero-1.jpeg",
       category: "accommodations",
       title: "Forest Cabin",
       description: "Luxury meets nature in perfect harmony",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&h=600&fit=crop",
+      src: "/images/hero/glamping-hero-2.jpeg",
       category: "nature",
       title: "Ancient Forest",
       description: "Towering trees create natural cathedrals",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=600&fit=crop",
+      src: "/images/accommodation/triangle-tent-2.jpeg",
       category: "nature",
       title: "Filtered Light",
       description: "Sunbeams dance through the canopy",
@@ -132,7 +132,7 @@ const Gallery = () => {
               onClick={() => setSelectedImage(image.src)}
             >
               <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-white">
-                 {/* eslint-disable-next-line @next/next/no-img-element */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={image.src}
                   alt={image.title}
@@ -192,7 +192,7 @@ const Gallery = () => {
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl max-h-full">
-             {/* eslint-disable-next-line @next/next/no-img-element */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={selectedImage}
               alt="Gallery Image"
