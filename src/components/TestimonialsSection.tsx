@@ -17,7 +17,9 @@ const testimonials = [
     location: "Mumbai",
     text: "Pawna Camps exceeded every expectation! The sunrise yoga, luxury tent comfort, and stargazing experience created the most romantic weekend of our lives. Can't wait to return!",
     rating: 5,
-    image: "/images/testimonials/pawna-lake-camping-testimonials-1.webp",
+    // image: "/images/testimonials/pawna-lake-camping-testimonials-1.webp",
+    image:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "Couple",
   },
   {
@@ -25,7 +27,8 @@ const testimonials = [
     location: "Pune",
     text: "Our kids are still talking about the night forest walk and campfire stories. The perfect blend of adventure and comfort for families. Every detail was thoughtfully planned!",
     rating: 5,
-    image: "/images/testimonials/pawna-lake-camping-testimonials-2.webp",
+    image: "https://images.unsplash.com/photo-1546961329-78bef0414d7c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // image: "/images/testimonials/pawna-lake-camping-testimonials-2.webp",
     category: "Family",
   },
   {
@@ -33,7 +36,8 @@ const testimonials = [
     location: "Pune",
     text: "As a solo female traveler, I felt completely safe and welcomed. The guided waterfall trek was incredible, and I made lifelong friends around the campfire!",
     rating: 5,
-    image: "/images/testimonials/pawna-lake-camping-testimonials-3.webp",
+    // image: "/images/testimonials/pawna-lake-camping-testimonials-3.webp",
+    image: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "Solo",
   },
 ];

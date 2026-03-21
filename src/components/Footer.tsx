@@ -67,11 +67,12 @@ const Footer = () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-[var(--earth-400)] to-[var(--earth-600)] rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">S</span>
+                  <span className="text-white font-bold text-xl">P</span>
                 </div>
                 <div>
-                  <h3 className="font-playfair text-xl font-bold">Serenity</h3>
-                  <p className="text-sm text-white/80">Wilderness Resort</p>
+                  <h3 className="font-playfair text-xl font-bold">
+                    Pune Camps
+                  </h3>
                 </div>
               </div>
 
@@ -192,7 +193,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="mt-8 pt-6 border-t border-white/10 text-center text-white/70 text-sm">
               <p>
-                © {currentYear} Serenity Wilderness Resort. All rights reserved.
+                © {currentYear} Pune Camps Resort. All rights reserved.
                 <span className="mx-2">|</span>
                 <a href="#" className="hover:text-earth-300 transition-colors">
                   Privacy Policy
@@ -210,7 +211,7 @@ const Footer = () => {
             </div>
           </div>
 
-         <FloatingActions />
+          <FloatingActions />
         </div>
       </div>
     </footer>

@@ -44,7 +44,7 @@ const Navigation = () => {
             className="flex items-center gap-3 cursor-pointer"
           >
             <div className="w-10 h-10 rounded-xl bg-[var(--forest-600)] flex items-center justify-center text-white font-bold">
-              S
+              P
             </div>
 
             <span
@@ -52,7 +52,7 @@ const Navigation = () => {
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
-              Serenity Wilderness
+              Pune Camps
             </span>
           </div>
 

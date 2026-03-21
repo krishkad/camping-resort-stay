@@ -124,7 +124,7 @@ const ExperienceWalkthrough = () => {
           <h2 className="font-playfair text-5xl md:text-6xl font-bold text-forest-700 mb-6">
             Your Perfect Day
             <span className="block text-earth-600 text-3xl md:text-4xl mt-2">
-              at Serenity Wilderness
+              at Pune Camps
             </span>
           </h2>
           <p className="text-xl text-forest-600 max-w-3xl mx-auto leading-relaxed">

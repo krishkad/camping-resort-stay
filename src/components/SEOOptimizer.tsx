@@ -29,8 +29,8 @@ const SEOOptimizer = ({ pageType, title, description, keywords, canonicalUrl }: 
     const localBusinessData = {
       "@context": "https://schema.org",
       "@type": "TouristAttraction",
-      "name": "Serenity Wilderness Resort",
-      "description": "Luxury camping resort at Serenity Wilderness, Maharashtra offering unique outdoor experiences",
+      "name": "Pune Camps Resort",
+      "description": "Luxury camping resort at Pune Camps, Maharashtra offering unique outdoor experiences",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lonavala",
@@ -122,7 +122,7 @@ const getBreadcrumbItems = (pageType: string) => {
     items.push({
       "@type": "ListItem",
       "position": 3,
-      "name": document.title.replace(' | Serenity Wilderness Resort', ''),
+      "name": document.title.replace(' | Pune Camps Resort', ''),
       "item": window.location.href
     });
   }
@@ -137,26 +137,26 @@ const getFAQItems = (
   const commonFAQs = [
     {
       "@type": "Question",
-      "name": "What is the best time to visit Serenity Wilderness?",
+      "name": "What is the best time to visit Pune Camps?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The best time to visit Serenity Wilderness is during the monsoon season (June to September) and winter months (October to February) when the weather is pleasant and the lake is full."
+        "text": "The best time to visit Pune Camps is during the monsoon season (June to September) and winter months (October to February) when the weather is pleasant and the lake is full."
       }
     },
     {
       "@type": "Question",
-      "name": "What activities are available at Serenity Wilderness?",
+      "name": "What activities are available at Pune Camps?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Serenity Wilderness offers camping, kayaking, boating, trekking to nearby forts, stargazing, bonfires, and various water sports activities."
+        "text": "Pune Camps offers camping, kayaking, boating, trekking to nearby forts, stargazing, bonfires, and various water sports activities."
       }
     },
     {
       "@type": "Question",
-      "name": "How far is Serenity Wilderness from Mumbai?",
+      "name": "How far is Pune Camps from Mumbai?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Serenity Wilderness is approximately 110 kilometers from Mumbai, taking about 2-3 hours by road depending on traffic conditions."
+        "text": "Pune Camps is approximately 110 kilometers from Mumbai, taking about 2-3 hours by road depending on traffic conditions."
       }
     }
   ];

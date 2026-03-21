@@ -22,7 +22,7 @@ const FloatingActions = () => {
 
   return (
     <div className="fixed bottom-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-      <div className="pointer-events-auto flex items-center gap-3 rounded-full border border-white/30 bg-white/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-4 py-2">
+      <div className="pointer-events-auto flex items-center gap-3 rounded-full border border-white/30 bg-white/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-2 pl-4 py-2">
         {/* Tagline */}
         <span className="hidden sm:block text-xs font-medium text-gray-700 pr-2">
           Need help booking?

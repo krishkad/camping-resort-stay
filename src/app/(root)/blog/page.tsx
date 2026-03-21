@@ -29,17 +29,17 @@ const BlogList = () => {
   return (
     <>
       <SEO
-        title="Serenity Wilderness Blog - Camping Guide & Travel Tips"
-        description="Discover the best camping experiences, travel guides, and adventure activities at Serenity Wilderness, Maharashtra. Expert tips for your perfect getaway."
+        title="Pune Camps Blog - Camping Guide & Travel Tips"
+        description="Discover the best camping experiences, travel guides, and adventure activities at Pune Camps, Maharashtra. Expert tips for your perfect getaway."
         keywords={[
-          "Serenity Wilderness blog",
-          "camping near Serenity Wilderness",
-          "things to do at Serenity Wilderness",
-          "best time to visit Serenity Wilderness",
-          "tourist attractions near Serenity Wilderness",
+          "Pune Camps blog",
+          "camping near Pune Camps",
+          "things to do at Pune Camps",
+          "best time to visit Pune Camps",
+          "tourist attractions near Pune Camps",
           "Maharashtra camping guide",
           "luxury camping Maharashtra",
-          "Serenity Wilderness activities",
+          "Pune Camps activities",
           "camping resort Maharashtra",
           "weekend getaway near Mumbai",
         ]}
@@ -61,7 +61,7 @@ const BlogList = () => {
 
           <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              Serenity Wilderness Blog
+              Pune Camps Blog
             </h1>
 
             <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-in">

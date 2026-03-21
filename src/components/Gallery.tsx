@@ -95,7 +95,7 @@ const Gallery = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[var(--forest-700)] mb-4">
+          <h2 className="font-semibold text-4xl md:text-6xl font-bold text-[var(--forest-700)] mb-4">
             Moments of Wonder
           </h2>
           <p className="text-xl text-[var(--forest-600)] max-w-2xl mx-auto">

@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Serenity Wilderness",
-  description: "Serenity Wilderness",
+  title: "Pune Camps",
+  description: "Pune Camps",
 };
 
 export default function RootLayout({
