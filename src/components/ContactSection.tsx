@@ -134,7 +134,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 animate-slide-in-right">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 py-4 animate-slide-in-right">
             <h3 className="font-playfair text-2xl font-semibold text-[var(--forest-700)] mb-8 text-center">
               Send us a Message
             </h3>

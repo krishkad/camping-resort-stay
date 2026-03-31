@@ -1,25 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import React, { useState } from "react";
 // import { useToast } from '@/hooks/use-toast';
 
 const BookingSection = () => {
@@ -162,32 +147,13 @@ const BookingSection = () => {
                       <Label className="text-[var(--forest-700)] font-medium">
                         Check-in Date
                       </Label>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className={cn(
-                              "w-full justify-start text-left font-normal h-12",
-                              !checkIn && "text-muted-foreground",
-                            )}
-                          >
-                            <CalendarIcon className="mr-2 h-4 w-4" />
-                            {checkIn
-                              ? format(checkIn, "PPP")
-                              : "Select check-in date"}
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={checkIn}
-                            onSelect={setCheckIn}
-                            disabled={(date) => date < new Date()}
-                            initialFocus
-                            className="pointer-events-auto"
-                          />
-                        </PopoverContent>
-                      </Popover>
+                      <input
+                        type="date"
+                        value={checkIn ? format(checkIn, "yyyy-MM-dd") : ""}
+                        onChange={(e) => setCheckIn(new Date(e.target.value))}
+                        min={new Date().toISOString().split("T")[0]}
+                        className="w-full h-12 px-3 rounded-md border border-input bg-background text-sm focus:ring-2 focus:ring-[var(--earth-500)]"
+                      />
                     </div>
 
                     {/* Check-out Date */}
@@ -195,32 +161,21 @@ const BookingSection = () => {
                       <Label className="text-[var(--forest-700)] font-medium">
                         Check-out Date
                       </Label>
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            className={cn(
-                              "w-full justify-start text-left font-normal h-12",
-                              !checkOut && "text-muted-foreground",
-                            )}
-                          >
-                            <CalendarIcon className="mr-2 h-4 w-4" />
-                            {checkOut
-                              ? format(checkOut, "PPP")
-                              : "Select check-out date"}
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={checkOut}
-                            onSelect={setCheckOut}
-                            // disabled={(date) => date < new Date() || (checkIn && date <= checkIn)}
-                            initialFocus
-                            className="pointer-events-auto"
-                          />
-                        </PopoverContent>
-                      </Popover>
+                      <input
+                        type="date"
+                        value={checkOut ? format(checkOut, "yyyy-MM-dd") : ""}
+                        onChange={(e) => {
+                          const date = new Date(e.target.value);
+                          if (checkIn && date <= checkIn) return;
+                          setCheckOut(date);
+                        }}
+                        min={
+                          checkIn
+                            ? format(checkIn, "yyyy-MM-dd")
+                            : new Date().toISOString().split("T")[0]
+                        }
+                        className="w-full h-12 px-3 rounded-md border border-input bg-background text-sm focus:ring-2 focus:ring-[var(--earth-500)]"
+                      />
                     </div>
                   </div>
 
@@ -230,18 +185,17 @@ const BookingSection = () => {
                       <Label className="text-[var(--forest-700)] font-medium">
                         Number of Guests
                       </Label>
-                      <Select value={guests} onValueChange={setGuests}>
-                        <SelectTrigger className="h-12">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {[1, 2, 3, 4, 5, 6].map((num) => (
-                            <SelectItem key={num} value={num.toString()}>
-                              {num} Guest{num > 1 ? "s" : ""}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                      <select
+                        value={guests}
+                        onChange={(e) => setGuests(e.target.value)}
+                        className="w-full h-12 px-3 rounded-md border border-input bg-background text-sm"
+                      >
+                        {[1, 2, 3, 4, 5, 6].map((num) => (
+                          <option key={num} value={num}>
+                            {num} Guest{num > 1 ? "s" : ""}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     {/* Accommodation */}
@@ -249,21 +203,20 @@ const BookingSection = () => {
                       <Label className="text-[var(--forest-700)] font-medium">
                         Accommodation Type
                       </Label>
-                      <Select
+                      <select
                         value={selectedAccommodation}
-                        onValueChange={setSelectedAccommodation}
+                        onChange={(e) =>
+                          setSelectedAccommodation(e.target.value)
+                        }
+                        className="w-full h-12 px-3 rounded-md border border-input bg-background text-sm"
                       >
-                        <SelectTrigger className="h-12">
-                          <SelectValue placeholder="Choose accommodation" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {accommodationOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                        <option value="">Choose accommodation</option>
+                        {accommodationOptions.map((option) => (
+                          <option key={option.value} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
 
